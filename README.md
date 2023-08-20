@@ -18,7 +18,7 @@ This is a repo for the Capstone project in the [Udacity C++ Nanodegree Program](
 * Ceres Solver >= 2.1
   * Follow [Ceres Installation](http://ceres-solver.org/installation.html).
 * PCL >= 1.10
-  * Follow [PCL Installation](http://www.pointclouds.org/downloads/linux.html).
+  * Follow [PCL Installation](https://pointclouds.org/downloads/).
 
 
 
@@ -139,7 +139,7 @@ The header is self-contained and provides common type aliases and angle conversi
 [tic_toc.h](include/tic_toc.h) header file offers a utility class named TicToc for measuring elapsed time in milliseconds. It's designed to be lightweight and straightforward to use, relying on the C++ Standard Library's `chrono` for time measurements.
 
 ### `lidarFactor.hpp`
-[lidarFactor.h](include/lidarFactor.h) header file defines several structures that encapsulate optimization factors related to Lidar measurements. These structures use the Ceres Solver library for optimization and Eigen for matrix operations, providing mechanisms to compute residuals for different constraints associated with Lidar data processing.
+[lidarFactor.h](include/lidarFactor.hpp) header file defines several structures that encapsulate optimization factors related to Lidar measurements. These structures use the Ceres Solver library for optimization and Eigen for matrix operations, providing mechanisms to compute residuals for different constraints associated with Lidar data processing.
 
 Features:
 1. LidarEdgeFactor: Computes the edge constraint between the current point and two other points from a prior cloud.
