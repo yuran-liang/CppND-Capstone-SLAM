@@ -22,7 +22,7 @@ link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
 # Find Ceres library
-find_package(Ceres REQUIRED)
+find_package(Ceres 2.1 REQUIRED)
 
 # Add Ceres include directories 
 include_directories(${CERES_INCLUDE_DIRS})
