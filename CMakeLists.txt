@@ -9,6 +9,14 @@ set(CMAKE_CXX_STANDARD 17)
 # Find PCL
 find_package(PCL 1.10 REQUIRED)
 
+# Recent macOS no longer ships the AGL framework, but Qt6 (pulled in via VTK) still adds it
+# to WrapOpenGL::WrapOpenGL, so drop it to avoid a linker error
+if(APPLE AND TARGET WrapOpenGL::WrapOpenGL)
+    get_target_property(_wrap_opengl_libs WrapOpenGL::WrapOpenGL INTERFACE_LINK_LIBRARIES)
+    list(FILTER _wrap_opengl_libs EXCLUDE REGEX "AGL")
+    set_target_properties(WrapOpenGL::WrapOpenGL PROPERTIES INTERFACE_LINK_LIBRARIES "${_wrap_opengl_libs}")
+endif()
+
 # Include directories
 include_directories(
     ${PCL_INCLUDE_DIRS}
