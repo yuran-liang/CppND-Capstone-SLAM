@@ -165,46 +165,6 @@ Features:
 
 3. Graceful Exit: The application stops reading and visualizing when there are no more files left or if the visualization window is closed.
 
-## Rubric points
-
-#### Readme  
-* [x] Instructions
-* [x] 3rd party libraries: PCL and Ceres Solver
-* [x] Description  
-
-#### Compiling and Testing  
-* [x] Compile & Run without error
-
-#### Loops, Functions, I/O  
-* [x] Functions and Control structures
-* [x] Reads files, process data, outputs it
-* [x] Accepts user input & output
-
-#### Object Oriented Programming  
-* [x] Organized in classes
-* [x] Appropriate access for class members
-* [x] Initialization lists
-* [x] Classes abstract implementation
-* [x] Encapsulate behaviour
-* [ ] Inheritance
-* [x] Overloaded functions
-* [ ] Override virtual functions
-* [ ] Templates
-
-#### Memory Management  
-* [x] Pass-by-reference
-* [ ] Appropriate use of destructors
-* [ ] Uses RAII
-* [ ] Follows the Rule of 5
-* [ ] Uses move semantics instead of copying
-* [x] Smart pointers instead of raw pointers
-
-#### Concurrency  
-* [ ] Uses multiple threads
-* [ ] Uses promise & future
-* [ ] Uses mutex or lock
-* [ ] Uses condition variable
-
 ## License
 
 This project is released under the [BSD 3-Clause License](LICENSE). It is a rewrite of [A-LOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM), which is based on LOAM by Ji Zhang (Carnegie Mellon University); see [NOTICE](NOTICE) for the upstream copyright notice and the sample data license.
