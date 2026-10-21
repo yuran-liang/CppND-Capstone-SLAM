@@ -1,3 +1,9 @@
+// Rewrite of A-LOAM (https://github.com/HKUST-Aerial-Robotics/A-LOAM).
+// Copyright 2013, Ji Zhang, Carnegie Mellon University
+// Further contributions copyright (c) 2016, Southwest Research Institute
+// Modifications copyright (c) 2023, Yuran Liang
+// Distributed under the BSD 3-Clause License, see LICENSE and NOTICE.
+
 #ifndef SCAN_REGISTRATION_H
 #define SCAN_REGISTRATION_H
 

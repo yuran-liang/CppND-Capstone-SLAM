@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 
 
     // Define a string for the folder path
-    std::string directoryPath = "/Users/yuranliang/Downloads/dataset/sequences/00/velodyne_pcd";
+    std::string directoryPath = "../velodyne_pcd";
 
     if(argc >= 2)
     {

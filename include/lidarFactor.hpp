@@ -1,3 +1,4 @@
+// Adapted from A-LOAM (https://github.com/HKUST-Aerial-Robotics/A-LOAM), BSD 3-Clause License, see NOTICE.
 // Author:   Tong Qin               qintonguav@gmail.com
 // 	         Shaozu Cao 		    saozu.cao@connect.ust.hk
 

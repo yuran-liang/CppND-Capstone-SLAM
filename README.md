@@ -25,6 +25,8 @@ This is a repo for the Capstone project in the [Udacity C++ Nanodegree Program](
 
 
 
+Tested on Ubuntu 24.04 with the distribution packages `libpcl-dev` (PCL 1.14) and `libceres-dev` (Ceres 2.2).
+
 ## Basic Build Instructions
 
 1. Clone this repo.
@@ -33,9 +35,11 @@ This is a repo for the Capstone project in the [Udacity C++ Nanodegree Program](
 4. Run Lidar SLAM: `./LidarSLAM /path/to/your/pcd_folder`
 5. Run Point Cloud Viewer: `./pcViewer /path/to/your/pcd_folder`
 
+Without an argument, both programs read the bundled sample data from `../velodyne_pcd`.
+
 ## Sample Data
 
-You can access the sample data in the [velodyne_pcd](./velodyne_pcd) directory.
+You can access the sample data in the [velodyne_pcd](./velodyne_pcd) directory. The frames are taken from sequence 00 of the [KITTI odometry dataset](https://www.cvlibs.net/datasets/kitti/eval_odometry.php) (Geiger et al., IJRR 2013), licensed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 ## Description
 
 LOAM is a state-of-the-art algorithm primarily designed for the purpose of real-time simultaneous localization and mapping (SLAM) using Lidar data. Developed with a keen focus on both efficiency and accuracy, LOAM demonstrates robust performance in varied environments, showcasing its capability to produce high-resolution maps while also estimating the sensor's motion in real-time.
@@ -151,7 +155,7 @@ Features:
 4. LidarDistanceFactor: Computes the Euclidean distance between the transformed current point and a given reference point.
 
 ### `pc_viewer_main.cpp`
-[pc_viewer_main.cpp](src/pc_viewer_main.cpp) is the entry point of thePoint Cloud Viewer
+[pc_viewer_main.cpp](src/pc_viewer_main.cpp) is the entry point of the Point Cloud Viewer
 program. It is a simple application that reads and visualizes point cloud data using the PointCloudReader and PointCloudVisualizer utilities.
 
 Features:
@@ -201,5 +205,6 @@ Features:
 * [ ] Uses mutex or lock
 * [ ] Uses condition variable
 
+## License
 
-
+This project is released under the [BSD 3-Clause License](LICENSE). It is a rewrite of [A-LOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM), which is based on LOAM by Ji Zhang (Carnegie Mellon University); see [NOTICE](NOTICE) for the upstream copyright notice and the sample data license.

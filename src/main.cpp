@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     double target_frame_duration = 99.5; //99.5 ms
 
     // Define a string for the folder path
-    std::string directoryPath = "/Users/yuranliang/Downloads/dataset/sequences/00/velodyne_pcd";
+    std::string directoryPath = "../velodyne_pcd";
 
     if(argc >= 2)
     {
