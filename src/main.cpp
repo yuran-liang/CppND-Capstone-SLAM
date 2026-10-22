@@ -5,6 +5,7 @@
 #include "OdoRefinement.h"
 
 #include <chrono>
+#include <iostream>
 #include <thread>
 
 #include "tic_toc.h"
@@ -59,7 +60,7 @@ int main(int argc, char** argv) {
             {
                 laserodometry->SetFrameCount(0);
                 odorefinement->process(laserodometry);
-                cout << "Current Map position x = " << odorefinement->GetTwCurr()[0] << " m    y = " << odorefinement->GetTwCurr()[1] << " m    z = " << odorefinement->GetTwCurr()[2]<<  " m \n";
+                std::cout << "Current Map position x = " << odorefinement->GetTwCurr()[0] << " m    y = " << odorefinement->GetTwCurr()[1] << " m    z = " << odorefinement->GetTwCurr()[2]<<  " m \n";
 
                 visualizer.updateCloud(odorefinement->GetCloudSurround());
                 visualizer.updateCarPose(odorefinement->GetTwCurr(),odorefinement->GetQwCurr());
@@ -95,7 +96,7 @@ int main(int argc, char** argv) {
         // If the time for this frame is too small (i.e. frame_duration is
         // smaller than the target ms_per_frame), delay the loop to
         // achieve the correct frame rate.
-        cout << "frame processing time " << t_whole.toc() << " ms *************\n";
+        std::cout << "frame processing time " << t_whole.toc() << " ms *************\n";
         if(t_whole.toc() < target_frame_duration) {
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(target_frame_duration - t_whole.toc())));
         }

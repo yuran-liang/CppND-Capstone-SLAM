@@ -2,6 +2,7 @@
 #include "PointCloudVisualizer.h"
 #include "tic_toc.h"
 #include <chrono>
+#include <iostream>
 #include <thread>
 
 
@@ -53,7 +54,7 @@ int main(int argc, char** argv) {
         // If the time for this frame is too small (i.e. frame_duration is
         // smaller than the target ms_per_frame), delay the loop to
         // achieve the correct frame rate.
-        cout << "frame processing time " << t_whole.toc() << " ms *************\n";
+        std::cout << "frame processing time " << t_whole.toc() << " ms *************\n";
         if(t_whole.toc() < target_frame_duration) {
             std::this_thread::sleep_for(std::chrono::milliseconds(static_cast<int>(target_frame_duration - t_whole.toc())));
         }
