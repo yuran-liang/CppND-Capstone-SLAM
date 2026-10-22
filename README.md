@@ -1,5 +1,7 @@
 # CPPND: Capstone Lidar SLAM
 
+[![Build](https://github.com/yuran-liang/CppND-Capstone-SLAM/actions/workflows/build.yml/badge.svg)](https://github.com/yuran-liang/CppND-Capstone-SLAM/actions/workflows/build.yml)
+
 This is a repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). This project presents an implementation of the [LOAM (Lidar Odometry and Mapping in Real-time)](https://www.ri.cmu.edu/pub_files/2014/7/Ji_LidarMapping_RSS2014_v8.pdf) algorithm.
 
 <img src="images/demo.gif" width="756" height="491" />
